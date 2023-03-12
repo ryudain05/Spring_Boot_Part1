@@ -13,6 +13,10 @@ import java.util.Optional;
 public class MemberService {
     private final MemberRepository memberRepository;
 
+    public MemberService(MemberRepository memberRepository){
+        this.memberRepository = memberRepository;
+    }
+
     /**
      * 회원가입
      */
@@ -23,10 +27,6 @@ public class MemberService {
         return member.getId();
     }
 
-
-    public MemberService(MemberRepository memberRepository) {
-        this.memberRepository = memberRepository;
-    }
 
     private void validateDuplicateMember(Member member) {
         memberRepository.findByName(member.getName())
