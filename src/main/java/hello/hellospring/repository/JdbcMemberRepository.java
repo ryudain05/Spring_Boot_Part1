@@ -132,6 +132,12 @@ public class JdbcMemberRepository implements MemberRepository {
             close(conn, pstmt, rs);
         }
     }
+
+    @Override
+    public Optional<Member> findByName(Long id) {
+        return Optional.empty();
+    }
+
     private Connection getConnection() {
         return DataSourceUtils.getConnection(dataSource);
     }

@@ -24,7 +24,7 @@ class MemberServiceIntegrationTest {
 
     @Test
     void 회원가입() {
-        //given
+        //given트
         Member member = new Member();
         member.setName("hello");
         //when
