@@ -28,10 +28,6 @@ public class MemoryMemberRepository implements MemberRepository{
                 .findAny();
     }
 
-    @Override
-    public Optional<Member> findByName(Long id) {
-        return Optional.empty();
-    }
 
     @Override
     public List<Member> findAll() {
