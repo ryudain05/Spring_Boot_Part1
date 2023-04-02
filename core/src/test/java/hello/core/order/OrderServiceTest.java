@@ -9,7 +9,7 @@ import org.assertj.core.api.Assertions;
 
 public class OrderServiceTest {
     MemberService memberService = new MemberServiceImpl(memberRepository);
-    OrderService orderService = new OrderServiceImpl();
+    OrderService orderService = new OrderServiceImpl(memberRepository, discountPolicy);
 
     @Test
     void createOrder(){
