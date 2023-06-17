@@ -8,7 +8,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 //@Component
 //class레벨에 있어야 함. 메소드레벨에 있으면 작동X
-@RequestMapping
 public class SpringMemberFormControllerV1 {
     @RequestMapping("/springmvc/v1/members/new-form")
     public ModelAndView process() {
